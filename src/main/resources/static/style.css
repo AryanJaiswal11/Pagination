@@ -1,0 +1,203 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Segoe UI,sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    background:
+            radial-gradient(circle at top left,#ff00ff22,transparent 40%),
+            radial-gradient(circle at bottom right,#00ffff33,transparent 40%),
+            linear-gradient(135deg,#050510,#0d0221,#020617);
+
+    color:white;
+
+    animation:bgMove 10s infinite alternate;
+
+}
+
+@keyframes bgMove{
+
+    from{
+
+        background-position:0 0;
+
+    }
+
+    to{
+
+        background-position:100% 100%;
+
+    }
+
+}
+
+.container{
+
+    width:92%;
+    margin:40px auto;
+
+    padding:30px;
+
+    border-radius:18px;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.05);
+
+    box-shadow:
+            0 0 25px #00ffff55,
+            0 0 60px #ff00ff22;
+
+}
+
+h1{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
+    color:#00ffff;
+
+    text-shadow:
+            0 0 10px cyan,
+            0 0 25px cyan;
+
+}
+
+.controls{
+
+    display:flex;
+
+    gap:15px;
+
+    justify-content:center;
+
+    flex-wrap:wrap;
+
+    margin-bottom:25px;
+
+}
+
+input,
+select{
+
+    padding:12px;
+
+    width:180px;
+
+    border:none;
+
+    outline:none;
+
+    color:white;
+
+    border-radius:8px;
+
+    background:#111827;
+
+    border:1px solid cyan;
+
+}
+
+button{
+
+    padding:12px 22px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    color:white;
+
+    background:linear-gradient(90deg,#ff00ff,#00ffff);
+
+    box-shadow:0 0 18px cyan;
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+            0 0 25px cyan,
+            0 0 35px magenta;
+
+}
+
+.info{
+
+    margin-bottom:20px;
+
+    text-align:center;
+
+    color:#00ffff;
+
+    font-size:18px;
+
+}
+
+table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    overflow:hidden;
+
+    border-radius:12px;
+
+}
+
+thead{
+
+    background:#00ffff;
+
+    color:black;
+
+}
+
+th{
+
+    padding:14px;
+
+}
+
+td{
+
+    padding:14px;
+
+    border-bottom:1px solid #ffffff22;
+
+}
+
+tbody tr:nth-child(even){
+
+    background:#ffffff08;
+
+}
+
+tbody tr:hover{
+
+    background:#00ffff22;
+
+}
+
+.pagination{
+
+    margin-top:25px;
+
+    text-align:center;
+
+}

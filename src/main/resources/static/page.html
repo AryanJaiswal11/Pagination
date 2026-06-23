@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pagination</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>⚡ Product Explorer</h1>
+
+    <div class="controls">
+
+        <input
+                type="number"
+                id="limit"
+                placeholder="Limit"
+                value="10">
+
+        <input
+                type="number"
+                id="cursor"
+                placeholder="Cursor (optional)">
+
+        <select id="category">
+
+            <option value="">All Categories</option>
+
+            <option value="SPORTS">SPORTS</option>
+            <option value="FOOD">FOOD</option>
+            <option value="FASHION">FASHION</option>
+            <option value="ELECTRONICS">ELECTRONICS</option>
+            <option value="FURNITURE">FURNITURE</option>
+
+        </select>
+
+        <button onclick="loadFirstPage()">
+            Search
+        </button>
+
+    </div>
+
+    <div class="info">
+
+        <span>
+            Next Cursor :
+        </span>
+
+        <span id="cursorDisplay">
+            null
+        </span>
+
+    </div>
+
+    <table>
+
+        <thead>
+
+        <tr>
+
+            <th>ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Quantity</th>
+
+        </tr>
+
+        </thead>
+
+        <tbody id="tableBody">
+
+        </tbody>
+
+    </table>
+
+    <div class="pagination">
+
+        <button id="nextBtn"
+                onclick="nextPage()">
+
+            Next Page →
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
